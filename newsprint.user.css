@@ -1,0 +1,27 @@
+/* Reduces padding between the h1 element and it's bottom border */
+h1 {
+	padding-bottom: 0.25em;
+}
+
+/* Centers and adds a line on either side of the h2 element */
+h2.md-end-block.md-heading {
+	text-align: center;
+	padding: 0 0.6em;
+	font-style: oblique;
+	letter-spacing: 0.0125em;
+}
+
+h2.md-end-block.md-heading span {
+	background-color: #f3f2ee;
+	padding: 0 0.3em;
+}
+
+h2.md-end-block.md-heading:before {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	width: 100%;
+	border-bottom: 2px solid #36284e;
+}
