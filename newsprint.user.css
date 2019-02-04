@@ -1,22 +1,97 @@
+/* loading additional typefaces for body text and quotes */
+
+@include-when-export url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic-ext');
+
+/* Load PT Sans */
+@font-face {
+	font-family: "PT Sans";
+	font-style: normal;
+	font-weight: normal;
+	src: local("PT Sans"), local("PTSans-Regular"),
+		url("./newsprint/PT_Sans-Web-Regular.ttf") format("ttf");
+}
+@font-face {
+	font-family: "PT Sans";
+	font-style: italic;
+	font-weight: normal;
+	src: local("PT Sans"), local("PTSans-Italic"),
+		url("./newsprint/PT_Sans-Web-Italic.ttf") format("ttf");
+}
+@font-face {
+	font-family: "PT Sans";
+	font-style: normal;
+	font-weight: bold;
+	src: local("PT Sans"), local("PTSans-Bold"),
+		url("./newsprint/PT_Sans-Web-Bold.ttf") format("ttf");
+}
+@font-face {
+	font-family: "PT Sans";
+	font-style: italic;
+	font-weight: bold;
+	src: local("PT Sans"), local("PTSans-BoldItalic"),
+		url("./newsprint/PT_Sans-Web-BoldItalic.ttf") format("ttf");
+}
+
+/* Load PT Caption */
+@font-face {
+	font-family: "PT Sans Caption";
+	font-style: normal;
+	font-weight: normal;
+	src: local("PT Sans Caption"), local("PTCaption-Regular"),
+		url("./newsprint/PT_Sans-Caption-Web-Regular.ttf") format("ttf");
+}
+@font-face {
+	font-family: "PT Sans Caption";
+	font-style: normal;
+	font-weight: bold;
+	src: local("PT Sans Caption"), local("PTSans-Bold"),
+		url("./newsprint/PT_Sans-Caption-Web-Bold.ttf") format("ttf");
+}
+
+/* TODO: Load PT Mono */
+
+/* Applying New Styles */
+
+html,
+body {
+	font-family: "PT Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "PT Serif", "Times New Roman", Times, serif;
+}
+
+blockquote,
+q {
+	font-family: "PT Sans Caption", "Times New Roman", Times, serif;
+}
+
+/* TODO: Apply PT Mono */
+
 /* Reduces padding between the h1 element and it's bottom border */
 h1 {
 	padding-bottom: 0.25em;
 }
 
 /* Centers and adds a line on either side of the h2 element */
-h2.md-end-block.md-heading {
+h2 {
 	text-align: center;
 	padding: 0 0.6em;
 	font-style: oblique;
 	letter-spacing: 0.0125em;
 }
 
-h2.md-end-block.md-heading span {
+h2 span {
 	background-color: #f3f2ee;
 	padding: 0 0.3em;
 }
 
-h2.md-end-block.md-heading:before {
+h2:before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -26,11 +101,11 @@ h2.md-end-block.md-heading:before {
 	border-bottom: 2px solid #36284e;
 }
 
-h3.md-end-block.md-heading {
+h3 {
 	font-weight: bold;
 	letter-spacing: 1px;
 }
 
-h4.md-end-block.md-heading {
+h4 {
 	font-style: italic;
 }
