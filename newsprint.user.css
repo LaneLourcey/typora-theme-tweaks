@@ -80,25 +80,28 @@ h1 {
 
 /* Centers and adds a line on either side of the h2 element */
 h2 {
-	text-align: center;
-	padding: 0 0.6em;
-	font-style: oblique;
+	display: flex;
+	flex-basis: 100%;
+	align-itmes: center;
+	/* margin: 10px 10px; */
 	letter-spacing: 0.0125em;
-}
-
-h2 span {
-	background-color: #f3f2ee;
-	padding: 0 0.3em;
 }
 
 h2:before {
 	content: "";
-	display: block;
-	position: absolute;
-	z-index: -1;
-	top: 50%;
-	width: 100%;
-	border-bottom: 2px solid #36284e;
+	flex-grow: 1;
+	background: #36284e;
+	height: 1px;
+	transform: translateY(0.55em);
+	margin-right: 0.5em;
+}
+h2:after {
+	content: "";
+	flex-grow: 1;
+	background: #36284e;
+	height: 1px;
+	transform: translateY(0.55em);
+	margin-left: 0.5em;
 }
 
 h3 {
